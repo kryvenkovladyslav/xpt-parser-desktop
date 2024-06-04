@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace SasXptParser.Domain
+namespace XptParser.Domain
 {
     /// <summary>
     /// Represents the XPT Document

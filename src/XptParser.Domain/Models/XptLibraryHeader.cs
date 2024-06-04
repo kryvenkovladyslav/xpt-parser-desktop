@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SasXptParser.Domain
+namespace XptParser.Domain
 {
     /// <summary>
     /// Represents a library header record of the XPT Document

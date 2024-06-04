@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace SasXptParser.Domain
+namespace XptParser.Domain
 {
     public sealed class XptMemberDescriptorHeader
     {

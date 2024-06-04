@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 
-namespace SasXptParser.Domain
+namespace XptParser.Domain
 {
     /// <summary>
     /// Provides methods for parsing XPT Document into .NET object
