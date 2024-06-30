@@ -1,6 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using SasXptParser.DependencyInjection;
-using XptParser.Domain;
+using XptParser.Contracts;
 
 namespace XptParser.BusinessLayer
 {

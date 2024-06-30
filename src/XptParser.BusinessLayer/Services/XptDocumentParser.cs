@@ -1,4 +1,5 @@
 ﻿using SasXptParser.Abstract;
+using XptParser.Contracts;
 using XptParser.Domain;
 using System;
 using System.IO;

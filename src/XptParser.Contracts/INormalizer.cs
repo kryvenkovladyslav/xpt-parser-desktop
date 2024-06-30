@@ -1,4 +1,4 @@
-﻿namespace XptParser.Domain
+﻿namespace XptParser.Contracts
 {
     /// <summary>
     /// Provides methods for normalizing strings

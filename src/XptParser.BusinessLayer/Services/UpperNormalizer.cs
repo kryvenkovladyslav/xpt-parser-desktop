@@ -1,4 +1,4 @@
-﻿using XptParser.Domain;
+﻿using XptParser.Contracts;
 
 namespace XptParser.BusinessLayer
 {

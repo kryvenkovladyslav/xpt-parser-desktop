@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using XptParser.Domain;
+using XptParser.Contracts;
 
 namespace XptParser.BusinessLayer
 {

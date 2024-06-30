@@ -1,7 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Threading.Tasks;
-using XptParser.Domain;
+using XptParser.Contracts;
 
 namespace XptParser.BusinessLayer
 {

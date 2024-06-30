@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using System.Threading.Tasks;
 
-namespace XptParser.Domain
+namespace XptParser.Contracts
 {
     /// <summary>
     /// Provides methods for reading documents
