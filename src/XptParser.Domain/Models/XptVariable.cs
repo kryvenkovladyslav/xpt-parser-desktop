@@ -1,4 +1,4 @@
-﻿namespace SasXptParser.Domain
+﻿namespace XptParser.Domain
 {
     /// <summary>
     /// Represents a variable (key and value pair) of the XPT Document

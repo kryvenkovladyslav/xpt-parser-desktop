@@ -1,4 +1,4 @@
-﻿namespace SasXptParser.Domain
+﻿namespace XptParser.Domain
 {
     /// <summary>
     /// Represents an observation of the XPT Document

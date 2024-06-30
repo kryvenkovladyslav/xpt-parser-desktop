@@ -10,4 +10,9 @@
     <PackageReference Include="SasXptParser.DependencyInjection" Version="1.0.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\XptParser.Contracts\XptParser.Contracts.csproj" />
+    <ProjectReference Include="..\XptParser.Domain\XptParser.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
