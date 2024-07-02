@@ -1,6 +1,6 @@
-﻿using SasXptParser.Abstract;
-using XptParser.Domain;
+﻿using XptParser.Domain;
 using System.Linq;
+using SasXptParser.Abstract;
 
 namespace XptParser.BusinessLayer
 {

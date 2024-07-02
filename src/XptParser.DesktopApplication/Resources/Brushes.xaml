@@ -1,0 +1,17 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <SolidColorBrush x:Key="TransparentBrush" Color="Transparent" />
+    <SolidColorBrush x:Key="WhiteBrush" Color="White" />
+    <SolidColorBrush x:Key="TabControlBrush" Color="#1768C7" />
+    <SolidColorBrush x:Key="FooterBrush" Color="AliceBlue" />
+    <SolidColorBrush x:Key="MainViewBrush" Color="#4A4A4A" />
+    <SolidColorBrush x:Key="PanelBrush" Color="#313132" />
+    <SolidColorBrush x:Key="LightYellowBrush" Color="LightGoldenrodYellow" />
+    <SolidColorBrush x:Key="LightBlueBrush" Color="#1567E1" />
+    <SolidColorBrush x:Key="DarkBlueBrush" Color="DarkBlue" />
+    <SolidColorBrush x:Key="LightRedBrush" Color="Red" />
+    <SolidColorBrush x:Key="DarkRedBrush" Color="DarkRed" />
+    <SolidColorBrush x:Key="LightDarkGreyBrush" Color="#2E333A" />
+    
+</ResourceDictionary>

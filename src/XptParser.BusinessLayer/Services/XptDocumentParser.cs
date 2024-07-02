@@ -1,9 +1,9 @@
-﻿using SasXptParser.Abstract;
-using XptParser.Contracts;
+﻿using XptParser.Contracts;
 using XptParser.Domain;
 using System;
 using System.IO;
 using System.Threading.Tasks;
+using SasXptParser.Abstract;
 
 namespace XptParser.BusinessLayer
 {

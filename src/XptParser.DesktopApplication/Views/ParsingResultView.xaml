@@ -1,0 +1,74 @@
+﻿<UserControl x:Class="XptParser.DesktopApplication.Views.ParsingResultView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Grid>
+        <ScrollViewer Style="{StaticResource ApplicationScrollViewerStyles}"
+                      PreviewMouseWheel="HandleScrollViewerPreviewMouseWheel">
+
+            <Grid Margin="30 10">
+                <Grid VerticalAlignment="Center">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <Grid Grid.Row="0" Margin="30 30 30 20">
+                        <DataGrid Style="{StaticResource ApplicationDataGridStyles}" 
+                                  ItemsSource="{Binding XptDocumentViewModel.LibraryHeaders}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Version" Binding="{Binding Version}" />
+                                <DataGridTextColumn Header="Operation System" Binding="{Binding OperationSystem}" />
+                                <DataGridTextColumn Header="First Created At" Binding="{Binding CreatedDateTime}" />
+                                <DataGridTextColumn Header="Last Modified At" Binding="{Binding LastModifiedDateTime}" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+
+                    <Grid Grid.Row="1" Margin="30 0">
+                        <DataGrid Style="{StaticResource ApplicationDataGridStyles}"
+                                  ItemsSource="{Binding XptDocumentViewModel.MemberDescriptorHeaders}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Dataset's Name" Binding="{Binding DataSetName}" />
+                                <DataGridTextColumn Header="Data Set" Binding="{Binding DataSet}" />
+                                <DataGridTextColumn Header="Version" Binding="{Binding Version}" />
+                                <DataGridTextColumn Header="Operation System" Binding="{Binding OperationSystem}" />
+                                <DataGridTextColumn Header="First Created At" Binding="{Binding CreatedDateTime}" />
+                                <DataGridTextColumn Header="Last Modified At" Binding="{Binding ModifiedDateTime}" />
+                                <DataGridTextColumn Header="Label" Binding="{Binding Label}" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+
+                    <Grid Grid.Row="2" Margin="30 20">
+                        <DataGrid Style="{StaticResource ApplicationDataGridStyles}"
+                                  ItemsSource="{Binding XptDocumentViewModel.Variables}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                                <DataGridTextColumn Header="Label" Binding="{Binding Label}" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+
+                    <Grid Grid.Row="3" Margin="30 0 30 20">
+                        <DataGrid Style="{StaticResource ApplicationDataGridStyles}"
+                                  ItemsSource="{Binding XptDocumentViewModel.Observations}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Identifier" Binding="{Binding Identifier}" />
+                                <DataGridTextColumn Header="Label" Binding="{Binding Label}" />
+                                <DataGridTextColumn Header="Name" Binding="{Binding Name}" />
+                                <DataGridTextColumn Header="Value" Binding="{Binding Value}" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </Grid>
+
+                </Grid>
+            </Grid>
+
+        </ScrollViewer>
+    </Grid>
+    
+</UserControl>

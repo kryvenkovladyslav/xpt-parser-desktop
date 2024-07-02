@@ -2,11 +2,16 @@
 
 namespace XptParser.DesktopApplication
 {
-    public partial class MainWindow : Window
+    public sealed partial class MainWindow : Window
     {
-        public MainWindow()
+        private readonly MainViewModel mainViewModel;
+
+        public MainWindow(MainViewModel mainViewModel)
         {
             this.InitializeComponent();
+
+            this.mainViewModel = mainViewModel;
+            this.DataContext = this.mainViewModel;
         }
     }
 }
