@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="XptParser.DesktopApplication.Controls.ExplorerItem"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="ExplorerItemControlComponent">
+    
+    <Grid>
+        <Menu>
+            <MenuItem Style="{StaticResource ApplicationExplorerMenuItemStyles}" 
+                      SubmenuOpened="HandleMenuItemSubmenuOpened"
+                      MouseDoubleClick="HandleMenuItemMouseDoubleClick"
+                      PreviewMouseRightButtonDown="HandleMenuItemPreviewMouseRightButtonDown"
+                      Header="{Binding ItemName, ElementName=ExplorerItemControlComponent}"
+                      ItemsSource="{Binding ItemCommandsSource, ElementName=ExplorerItemControlComponent}">
+                
+                <MenuItem.ItemTemplate>
+                    <DataTemplate>
+                        <Button Style="{StaticResource ApplicationDefaultButtonStyles}" Background="Transparent" 
+                                Content="{Binding Name}" 
+                                Command="{Binding Command}" 
+                                CommandParameter="{Binding SelectedItem, ElementName=ExplorerItemControlComponent, Mode=TwoWay}"/>
+                    </DataTemplate>
+                </MenuItem.ItemTemplate>
+                
+            </MenuItem>
+        </Menu>
+    </Grid>
+    
+</UserControl>
