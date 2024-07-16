@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:converter="clr-namespace:XptParser.DesktopApplication">
+    
+    <BooleanToVisibilityConverter x:Key="ApplicationBooleanToVisibilityConverter" />
+    <converter:ExplorerVisibilityToBitmapValueConverter x:Key="ExplorerVisibilityToBitmapValueConverter" />
+    <converter:ExplorerSidesToIntegerValueConverter x:Key="ApplicationExplorerSidesToIntegerValueConverter" />
+    <converter:ExplorerSideToBitmapValueConverter x:Key="ExplorerSideToBitmapValueConverter" />
+    <converter:ExplorerVisibilityToVisibilityValueConverter x:Key="ExplorerVisibilityToVisibilityValueConverter" />
+</ResourceDictionary>

@@ -1,0 +1,16 @@
+﻿<UserControl x:Class="XptParser.DesktopApplication.Controls.FooterControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    
+    <Grid>
+        <StatusBar Background="{StaticResource PanelBrush}">
+            <StatusBarItem FontSize="15" HorizontalAlignment="Center">
+                <TextBlock Margin="5"
+                           FontFamily="{DynamicResource LatoThin}" 
+                           Foreground="{StaticResource WhiteBrush}"  
+                           Text="(c) SAS XPT Document Parser" />
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+    
+</UserControl>

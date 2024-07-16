@@ -1,0 +1,71 @@
+﻿<Window x:Class="XptParser.DesktopApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:control="clr-namespace:XptParser.DesktopApplication.Controls" 
+        Title="SAS XPT Document Parser" Height="450" Width="800" x:Name="Root">
+    
+    <Grid Style="{StaticResource ApplicationRootGridStyles}">
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Grid Grid.Row="0">
+
+            <ListView Margin="0" Style="{StaticResource ApplicationTopNavigationBarListViewStyles}"
+                      ItemTemplate="{StaticResource ApplicationTabListViewItemDataTemplate}"
+                      ItemsSource="{Binding Tabs}" SelectedItem="{Binding SelectedTabViewModel}">
+                <ListView.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel IsItemsHost="True" />
+                    </ItemsPanelTemplate>
+                </ListView.ItemsPanel>
+            </ListView>
+
+        </Grid>
+
+        <Grid Grid.Row="1">
+            <Grid>
+                
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                
+                <Grid Grid.Column="{Binding ExplorerInteractiveViewModel.CurrentExplorerSidePosition, 
+                    Converter={StaticResource ApplicationExplorerSidesToIntegerValueConverter}}">
+
+                    <Border BorderBrush="{StaticResource WhiteBrush}" BorderThickness="0 1">
+                        <control:ExplorerBarControl 
+                            ItemsSource="{Binding ExplorerInteractiveViewModel.Items}"               
+                            ExplorerVisibility="{Binding ExplorerInteractiveViewModel.ExplorerVisibility}"
+                            ExplorerSide="{Binding ExplorerInteractiveViewModel.CurrentExplorerSidePosition}"
+                            AddExplorerItemCommand="{Binding ExplorerInteractiveViewModel.AddExplorerItemCommand}"
+                            CloseExplorerBarCommand="{Binding ExplorerInteractiveViewModel.CloseExplorerBarCommand}"  
+                            RemoveExplorerItemCommand="{Binding ExplorerInteractiveViewModel.RemoveExplorerItemCommand}"
+                            ChangeExplorerBarSideCommand="{Binding ExplorerInteractiveViewModel.ChangeExplorerBarSideCommand}"
+                            CurrentSelectedExplorerItem="{Binding ExplorerInteractiveViewModel.CurrentSelectedExplorerItem, Mode=TwoWay}"
+                            LeftMouseDoubleClickHotCommand="{Binding ExplorerInteractiveViewModel.LeftMouseDoubleClickHotCommand}" />
+                    </Border>
+                        
+                </Grid>
+
+                <Grid Grid.Column="1">
+                    <Border BorderBrush="{StaticResource WhiteBrush}" BorderThickness="0 1">
+                        <ContentControl Content="{Binding SelectedViewModel}" />
+                    </Border>
+                </Grid>
+    
+            </Grid>
+        </Grid>
+
+        <Grid Grid.Row="2" >
+            <control:FooterControl />
+        </Grid>
+        
+    </Grid>
+    
+</Window>

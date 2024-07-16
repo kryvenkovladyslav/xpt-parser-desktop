@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{B2DD259B-1DE6-4272-B919-FF569D7E6D89}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{FC5BAFD3-0D38-43B1-B174-410265491171}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XptParser.BusinessLayerTests", "tests\XptParser.BusinessLayerTests\XptParser.BusinessLayerTests.csproj", "{F61F044E-E089-4399-9582-9B3D08ADE4C2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XptParser.BusinessLayer", "src\XptParser.BusinessLayer\XptParser.BusinessLayer.csproj", "{F75DF4EC-C2AE-4574-B87A-5F18B65474EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XptParser.DesktopApplication", "src\XptParser.DesktopApplication\XptParser.DesktopApplication.csproj", "{642EAF44-CA4D-46D5-888C-8F66FE9742D7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XptParser.Domain", "src\XptParser.Domain\XptParser.Domain.csproj", "{E543BE82-ED66-4B91-8757-B2FD9C56EB69}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "XptParser.Contracts", "src\XptParser.Contracts\XptParser.Contracts.csproj", "{F578D9FB-CEBD-414A-A5D3-C0282EBE0DF8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F61F044E-E089-4399-9582-9B3D08ADE4C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61F044E-E089-4399-9582-9B3D08ADE4C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61F044E-E089-4399-9582-9B3D08ADE4C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61F044E-E089-4399-9582-9B3D08ADE4C2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F75DF4EC-C2AE-4574-B87A-5F18B65474EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F75DF4EC-C2AE-4574-B87A-5F18B65474EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F75DF4EC-C2AE-4574-B87A-5F18B65474EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F75DF4EC-C2AE-4574-B87A-5F18B65474EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{642EAF44-CA4D-46D5-888C-8F66FE9742D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{642EAF44-CA4D-46D5-888C-8F66FE9742D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{642EAF44-CA4D-46D5-888C-8F66FE9742D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{642EAF44-CA4D-46D5-888C-8F66FE9742D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E543BE82-ED66-4B91-8757-B2FD9C56EB69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E543BE82-ED66-4B91-8757-B2FD9C56EB69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E543BE82-ED66-4B91-8757-B2FD9C56EB69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E543BE82-ED66-4B91-8757-B2FD9C56EB69}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F578D9FB-CEBD-414A-A5D3-C0282EBE0DF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F578D9FB-CEBD-414A-A5D3-C0282EBE0DF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F578D9FB-CEBD-414A-A5D3-C0282EBE0DF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F578D9FB-CEBD-414A-A5D3-C0282EBE0DF8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F61F044E-E089-4399-9582-9B3D08ADE4C2} = {B2DD259B-1DE6-4272-B919-FF569D7E6D89}
+		{F75DF4EC-C2AE-4574-B87A-5F18B65474EA} = {FC5BAFD3-0D38-43B1-B174-410265491171}
+		{642EAF44-CA4D-46D5-888C-8F66FE9742D7} = {FC5BAFD3-0D38-43B1-B174-410265491171}
+		{E543BE82-ED66-4B91-8757-B2FD9C56EB69} = {FC5BAFD3-0D38-43B1-B174-410265491171}
+		{F578D9FB-CEBD-414A-A5D3-C0282EBE0DF8} = {FC5BAFD3-0D38-43B1-B174-410265491171}
+	EndGlobalSection
+EndGlobal

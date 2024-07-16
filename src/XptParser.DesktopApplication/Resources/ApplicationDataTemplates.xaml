@@ -1,0 +1,28 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:view="clr-namespace:XptParser.DesktopApplication.Views"
+                    xmlns:viewModel="clr-namespace:XptParser.DesktopApplication"
+                    xmlns:control="clr-namespace:XptParser.DesktopApplication.Controls">
+    
+    <DataTemplate DataType="{x:Type viewModel:ParsingResultViewModel}">
+        <view:ParsingResultView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type viewModel:MainViewModel}">
+        <view:DefaultView />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ListViewItem}" x:Key="ApplicationTabListViewItemDataTemplate">
+        <control:TabControl TabDisplayName="{Binding Name}"
+                            CloseTabCommand="{Binding ElementName=Root, Path=DataContext.CloseTabCommand}"
+                            CloseTabCommandCommandParameter="{Binding ElementName=Root, Path=DataContext.SelectedTabViewModel}" />
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type ListViewItem}" x:Key="ApplicationExplorerItemListViewItemDataTemplate">
+        <control:ExplorerItem
+             ItemName="{Binding Name}"
+             ItemCommandsSource="{Binding Commands}"
+             SelectedItem="{Binding CurrentSelectedExplorerItem, ElementName=ExplorerBarControlComponent, Mode=TwoWay}" />
+    </DataTemplate>
+
+</ResourceDictionary>

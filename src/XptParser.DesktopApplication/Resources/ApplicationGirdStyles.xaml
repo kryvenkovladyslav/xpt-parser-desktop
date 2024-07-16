@@ -1,0 +1,8 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style TargetType="{x:Type Grid}" x:Key="ApplicationRootGridStyles">
+        <Setter Property="Background" Value="{StaticResource MainViewBrush}" />
+    </Style>
+        
+</ResourceDictionary>
