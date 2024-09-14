@@ -1,6 +1,4 @@
 # Desktop SAS XPT Parser
-
-# General information
 This project represents a desktop version of SAS XPT parser using the XPT Parser NuGet package.
 The project has been implemented using .NET 8 and WPF framework for implementing a modern desktop application.
 This is the first WPF project and the project can be considered as a first step into WPF.
