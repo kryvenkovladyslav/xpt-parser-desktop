@@ -4,8 +4,16 @@ using SasXptParser.Abstract;
 
 namespace XptParser.BusinessLayer
 {
+    /// <summary>
+    /// Provides extension methods for mapping SAS XPT records to business-layer domain models
+    /// </summary>
     internal static class MappingExtensions
     {
+        /// <summary>
+        /// Maps a <see cref="SasXptLibraryHeaderRecord"/> to a <see cref="XptLibraryHeader"/>
+        /// </summary>
+        /// <param name="record">The source library header record</param>
+        /// <returns>The mapped <see cref="XptLibraryHeader"/></returns>
         internal static XptLibraryHeader ToXptLibraryHeader(this SasXptLibraryHeaderRecord record)
         {
             return new XptLibraryHeader
@@ -17,6 +25,11 @@ namespace XptParser.BusinessLayer
             };
         }
 
+        /// <summary>
+        /// Maps a <see cref="SasXptMemberDescriptorHeaderRecord"/> to a <see cref="XptMemberDescriptorHeader"/>
+        /// </summary>
+        /// <param name="record">The source member descriptor header record</param>
+        /// <returns>The mapped <see cref="XptMemberDescriptorHeader"/></returns>
         internal static XptMemberDescriptorHeader ToXptMemberDescriptorHeader(this SasXptMemberDescriptorHeaderRecord record)
         {
             return new XptMemberDescriptorHeader
@@ -31,6 +44,11 @@ namespace XptParser.BusinessLayer
             };
         }
 
+        /// <summary>
+        /// Maps a <see cref="SasXptVariable"/> to a <see cref="XptVariable"/>
+        /// </summary>
+        /// <param name="variable">The source variable</param>
+        /// <returns>The mapped <see cref="XptVariable"/></returns>
         internal static XptVariable ToXptVariable(this SasXptVariable variable)
         {
             return new XptVariable
@@ -40,6 +58,11 @@ namespace XptParser.BusinessLayer
             };
         }
 
+        /// <summary>
+        /// Maps a <see cref="SasXptObservation"/> to a <see cref="XptObservation"/>
+        /// </summary>
+        /// <param name="observation">The source observation</param>
+        /// <returns>The mapped <see cref="XptObservation"/></returns>
         internal static XptObservation ToXptObservation(this SasXptObservation observation)
         {
             return new XptObservation
@@ -51,7 +74,11 @@ namespace XptParser.BusinessLayer
             };
         }
 
-
+        /// <summary>
+        /// Maps a <see cref="SasXptDocument"/> to a <see cref="XptDocument"/>, including its header, descriptor, variables, and observations
+        /// </summary>
+        /// <param name="document">The source SAS XPT document</param>
+        /// <returns>The mapped <see cref="XptDocument"/></returns>
         internal static XptDocument ToXptDocument(this SasXptDocument document)
         {
             var xptVariables = document.DataRecord.Variables.Select(variable => variable.ToXptVariable()).ToList();
