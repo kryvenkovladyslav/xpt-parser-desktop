@@ -3,21 +3,42 @@ using XptParser.Contracts;
 
 namespace XptParser.DesktopApplication
 {
+    /// <summary>
+    /// Provides functionality for parsing XPT documents.
+    /// </summary>
     public sealed class ParsingXptDocumentViewModel
     {
+        /// <summary>
+        /// Stores the document reader.
+        /// </summary>
         private readonly IDocumentReader documentReader;
 
+        /// <summary>
+        /// Stores the XPT document parser.
+        /// </summary>
         private readonly IXptDocumentParser xptDocumentParser;
 
+        /// <summary>
+        /// Gets the command used to parse an XPT document.
+        /// </summary>
         public ICommand ParseDocumentCommand { get; init; }
 
-        public ParsingXptDocumentViewModel(IDocumentReader documentReader, IXptDocumentParser xptDocumentParser) 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ParsingXptDocumentViewModel"/> class.
+        /// </summary>
+        /// <param name="documentReader">The document reader.</param>
+        /// <param name="xptDocumentParser">The XPT document parser.</param>
+        public ParsingXptDocumentViewModel(IDocumentReader documentReader, IXptDocumentParser xptDocumentParser)
         {
             this.documentReader = documentReader;
             this.xptDocumentParser = xptDocumentParser;
             this.ParseDocumentCommand = new DelegateCommand(this.HandleDocumentParseCommand);
         }
 
+        /// <summary>
+        /// Handles the command used to parse an XPT document.
+        /// </summary>
+        /// <param name="parameter">The Explorer item view model containing the XPT document.</param>
         private async void HandleDocumentParseCommand(object parameter = null)
         {
             var xptDocumentExplorerItem = parameter as XptDocumentExplorerItemViewModel;
